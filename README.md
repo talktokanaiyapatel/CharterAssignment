@@ -27,8 +27,14 @@ Program behaviour:
 
 How to Run:
 
-download zip of the project from git and extract. Then you just have to import in intellij.
-Then run file: com/retailer/rewardspoints/RewardPointsApplication.java
+- Go to https://github.com/talktokanaiyapatel/CharterAssignment
+- Select master branch.
+- click on Code (green button) and select 'Download ZIP'
+- Extract zip file in local folder
+- import folder in intellij
+- Then run file: com/retailer/rewardspoints/RewardPointsApplication.java
+
+Alternatively, You can use git url : https://github.com/talktokanaiyapatel/CharterAssignment.git to import project in intellij.
 
 Sample Urls:
 
