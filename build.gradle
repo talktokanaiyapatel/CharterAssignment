@@ -15,16 +15,11 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-
-
     implementation group: 'io.springfox', name: 'springfox-swagger2', version: '+'
     implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '+'
-
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'junit:junit:+'
     testImplementation 'org.mockito:mockito-core:+'
 }
-
-

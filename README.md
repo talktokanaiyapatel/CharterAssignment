@@ -19,6 +19,7 @@ Program behaviour:
         - CustomerDataRepository.java
         - TransactionDataRepository
 - Testcases are written in the com/retailer/rewardspoints/util/RewardsToPointUtilTest.java
+- HealthCheck-Integration test are in src/test/java/HealthCheckTest.java
 - Global Exception handler - If any other exceptions arise, they are handled globally. see com/retailer/rewardspoints/errorHandling/RestErrorHandler.java
 - Java lambda and stream APIs have been used for calculations.
 - Not used any authentication and authorisation mechanism. There are no tokens used for session.
@@ -27,8 +28,14 @@ Program behaviour:
 
 How to Run:
 
-download zip of the project from git and extract. Then you just have to import in intellij.
-Then run file: com/retailer/rewardspoints/RewardPointsApplication.java
+- Go to https://github.com/talktokanaiyapatel/CharterAssignment
+- Select master branch.
+- click on Code (green button) and select 'Download ZIP'
+- Extract zip file in local folder
+- import folder in intellij
+- Then run file: com/retailer/rewardspoints/RewardPointsApplication.java
+
+Alternatively, You can use git url : https://github.com/talktokanaiyapatel/CharterAssignment.git to import project in intellij.
 
 Sample Urls:
 
