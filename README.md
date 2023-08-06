@@ -1,17 +1,19 @@
 `# Rewards Point 
-Problem Statement:
+
+**_Problem Statement:_**
 
 A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.
 A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent over $50 in each transaction
 (e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
 Given a record of every transaction during a three month period, calculate the reward points earned for each customer per month and total
 
-Assumptions:
+**_Assumptions:_**
+
 - Transaction amount can be decimal. This program ignores decimal part for points conversion.
 - This program delivers Monthly count for all transactions present. It just not limited to just 3 months. it will aggregate for all months present.
 - This program ignores year part for points calculation. so transactions having different year but same month will be clubbed together.
 
-Program behaviour:
+**_Program behaviour:_**
 
 - currently program is in DEBUG mode and logs are in /CharterAssignment/RewardsApplication.log
 - DEBUG mode allows to see everything happening with flow and calculations.
@@ -31,7 +33,7 @@ Program behaviour:
 - Since we are dealing with single domain, no need to use CORS headers.
 
 
-How to Run:
+**_How to Run:_**
 
 - Go to https://github.com/talktokanaiyapatel/CharterAssignment
 - Select master branch.
@@ -44,7 +46,7 @@ Alternatively, You can use git url : https://github.com/talktokanaiyapatel/Chart
 
 Sample Urls:
 
-Existing customers:
+**_Existing customers:_**
 
 http://localhost:8080/rewardPoints/customer/101/points
 
@@ -66,18 +68,23 @@ http://localhost:8080/rewardPoints/customer/1010/points (customer without transa
 {"customerId":1010,"totalRewardPoints":0,"transactionCount":0,"monthlyRewards":{}}
 
 
-**Unavailable customer:**
+_**Unavailable customer:**_
 
 http://localhost:8080/rewardPoints/customer/1018/points
 
 {"errorMessage":"CustomerID: 1018 Sorry We could not find this customer. Please add valid customer ID","suggestedAction":"Please add data into com.retailer.rewards.repository.CustomerRepository class for customer.Also add corresponding Transaction records for customer into com.retailer.rewards.repository.TransactionRepository class. currently available customer can be found @ http://localhost:8080/rewardPoints/customers/ "}
 
 
-ALL CUSTOMER INFO: List all available customers.
+**_ALL CUSTOMER INFO: List all available customers.**_
 
 http://localhost:8080/rewardPoints/customers
 
 [{"customerId":1010,"customerName":"EmptyTest"},{"customerId":101,"customerName":"Amit"},{"customerId":102,"customerName":"Jack"},{"customerId":103,"customerName":"Ronaldo"},{"customerId":104,"customerName":"You"}]
+
+**_Not Supported URL_**
+http://localhost:8080/rewardPoints/customersssss/101/points
+
+{"errorMessage":" Something went Wrong !!","suggestedAction":"This URL is not supported !!"}
 
 
 
