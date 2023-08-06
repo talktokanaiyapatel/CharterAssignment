@@ -1,15 +1,12 @@
 package com.retailer.rewardspoints.errorHandling;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Global error handler for handling any type of error.
  */
-@ControllerAdvice
+@RestControllerAdvice
 public class RestErrorHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
@@ -22,18 +19,6 @@ public class RestErrorHandler {
                 "rewards.repository.CustomerDataRepository class for customer." +
                 "Also add corresponding Transaction records for customer into com.retailer.rewards.repository.TransactionDataRepository class. " +
                 "currently available customer can be found @ http://localhost:8080/rewardPoints/customers/ ");
-        return response;
-    }
-
-    /**
-     * Default global exception handler
-     */
-    @ExceptionHandler({Exception.class, Error.class})
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Object unknownExceptions(){
-        ExceptionResponse response = new ExceptionResponse();
-        response.setErrorMessage(" Something went Wrong !!");
-        response.setSuggestedAction("Please check your URL or input data.");
         return response;
     }
 }
