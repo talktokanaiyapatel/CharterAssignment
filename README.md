@@ -19,6 +19,7 @@ Program behaviour:
         - CustomerDataRepository.java
         - TransactionDataRepository
 - Testcases are written in the com/retailer/rewardspoints/util/RewardsToPointUtilTest.java
+- HealthCheck-Integration test are in src/test/java/HealthCheckTest.java
 - Global Exception handler - If any other exceptions arise, they are handled globally. see com/retailer/rewardspoints/errorHandling/RestErrorHandler.java
 - Java lambda and stream APIs have been used for calculations.
 - Not used any authentication and authorisation mechanism. There are no tokens used for session.
