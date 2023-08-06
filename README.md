@@ -13,6 +13,8 @@ Assumptions:
 
 Program behaviour:
 
+- I could not work on Input validation.
+- if you enter wrong url (no handler declared), it will respond with generic error message.
 - Exception is thrown if customer does not exists. But there is exception handler which responds with user friendly message and send link to get all customer present.
 - User response had totalTransactioncount to help customer understand that how many transactions are there.
 - Data is already encoded in two repository classes.Modify and add data in below two classes if you need additional data.
