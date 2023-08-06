@@ -82,6 +82,7 @@ http://localhost:8080/rewardPoints/customers
 [{"customerId":1010,"customerName":"EmptyTest"},{"customerId":101,"customerName":"Amit"},{"customerId":102,"customerName":"Jack"},{"customerId":103,"customerName":"Ronaldo"},{"customerId":104,"customerName":"You"}]
 
 **_Not Supported URL_**
+
 http://localhost:8080/rewardPoints/customersssss/101/points
 
 {"errorMessage":" Something went Wrong !!","suggestedAction":"This URL is not supported !!"}
