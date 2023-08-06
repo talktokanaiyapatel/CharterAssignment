@@ -7,7 +7,7 @@ import java.util.Objects;
  * POJO: represents Transaction entity in system
  */
 public class Transaction {
-    private Long transactionId;
+    private final Long transactionId;
 
     private final Long customerId;
 
@@ -47,4 +47,13 @@ public class Transaction {
         return Objects.hash(transactionId, customerId, transactionDate);
     }
 
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionId=" + transactionId +
+                ", customerId=" + customerId +
+                ", transactionDate=" + transactionDate +
+                ", transactionAmount=" + transactionAmount +
+                '}';
+    }
 }

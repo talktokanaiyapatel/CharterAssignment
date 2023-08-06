@@ -7,7 +7,7 @@ import java.util.Objects;
  */
 public class Customer {
     private Long customerId;
-    private String customerName;
+    private final String customerName;
 
     public Customer(Long customerId, String customerName) {
         this.customerId = customerId;
@@ -33,5 +33,13 @@ public class Customer {
     @Override
     public int hashCode() {
         return Objects.hash(customerId);
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
+                '}';
     }
 }

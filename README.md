@@ -13,6 +13,9 @@ Assumptions:
 
 Program behaviour:
 
+- currently program is in DEBUG mode and logs are in /CharterAssignment/RewardsApplication.log
+- DEBUG mode allows to see everything happening with flow and calculations.
+- You can change logging level in application.properties
 - I could not work on Input validation.
 - if you enter wrong url (no handler declared), it will respond with generic error message.
 - Exception is thrown if customer does not exists. But there is exception handler which responds with user friendly message and send link to get all customer present.

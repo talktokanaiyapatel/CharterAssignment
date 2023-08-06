@@ -50,4 +50,18 @@ public class RewardPoints {
     public void setTransactionCount(long transactionCount) {
         this.transactionCount = transactionCount;
     }
+
+    /**
+     * To facilitate the investigation
+     * @return returns string representation
+     */
+    @Override
+    public String toString() {
+        return "RewardPoints{" +
+                "customerId=" + customerId +
+                ", totalRewardPoints=" + totalRewardPoints +
+                ", transactionCount=" + transactionCount +
+                ", monthlyRewards=" + monthlyRewards +
+                '}';
+    }
 }
