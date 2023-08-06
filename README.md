@@ -41,29 +41,29 @@ Sample Urls:
 
 Existing customers:
 
-http://localhost:8080/rewardPoints/points/customer/101
+http://localhost:8080/rewardPoints/customer/101/points
 
 {"customerId":101,"totalRewardPoints":120,"transactionCount":6,"monthlyRewards":{"June":70,"July":50}}
 
-http://localhost:8080/rewardPoints/points/customer/102
+http://localhost:8080/rewardPoints/customer/102/points
 
 {"customerId":102,"totalRewardPoints":843,"transactionCount":5,"monthlyRewards":{"June":192,"May":1,"March":650}}
 
-http://localhost:8080/rewardPoints/points/customer/103
+http://localhost:8080/rewardPoints/customer/103/points
 
 {"customerId":103,"totalRewardPoints":805,"transactionCount":5,"monthlyRewards":{"June":800,"May":5,"April":0}}
 
-http://localhost:8080/rewardPoints/points/customer/104
+http://localhost:8080/rewardPoints/customer/104/points
 
 {"customerId":104,"totalRewardPoints":325,"transactionCount":6,"monthlyRewards":{"June":70,"May":249,"July":6}}
 
-http://localhost:8080/rewardPoints/points/customer/1010 (customer without transactions)
+http://localhost:8080/rewardPoints/customer/1010/points (customer without transactions)
 {"customerId":1010,"totalRewardPoints":0,"transactionCount":0,"monthlyRewards":{}}
 
 
 **Unavailable customer:**
 
-http://localhost:8080/rewardPoints/points/customer/1018
+http://localhost:8080/rewardPoints/customer/1018/points
 
 {"errorMessage":"CustomerID: 1018 Sorry We could not find this customer. Please add valid customer ID","suggestedAction":"Please add data into com.retailer.rewards.repository.CustomerRepository class for customer.Also add corresponding Transaction records for customer into com.retailer.rewards.repository.TransactionRepository class. currently available customer can be found @ http://localhost:8080/rewardPoints/customers/ "}
 

@@ -31,7 +31,7 @@ public class RewardPointsController {
      * @return rewards points by month for customer
      * @throws ResourceNotFoundException if no customer found
      */
-    @GetMapping(value = "/points/customer/{customerId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/customer/{customerId}/points", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RewardPoints> getRewardsByCustomerId(@PathVariable("customerId") Long customerId) throws ResourceNotFoundException {
         Customer customer = customerRepository.findByCustomerId(customerId);
         if (customer == null) {
