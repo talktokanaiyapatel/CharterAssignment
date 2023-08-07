@@ -25,11 +25,11 @@ public class RewardsPointsServiceImpl implements RewardsPointService {
      * @return rewards points
      */
     public RewardPoints getRewardsByCustomerId(Long customerId) {
-        log.info(" calling rewards service for customer {}",customerId);
+        log.info(" calling rewards service for customer {}", customerId);
         // Fetching all transactions for customer
         Set<Transaction> transactionsSet = transactionRepository.findAllByCustomerId(customerId);
-        log.debug("Fetched all transaction for user: {} all transactions: {}",customerId,transactionsSet);
+        log.debug("Fetched all transaction for user: {} all transactions: {}", customerId, transactionsSet);
         //Getting all data for individual customer based on ID.
-        return RewardsToPointUtil.getPointForUser(transactionsSet,customerId);
+        return RewardsToPointUtil.getPointForUser(transactionsSet, customerId);
     }
 }

@@ -6,8 +6,8 @@ import java.util.Objects;
  * POJO - representing customer in system
  */
 public class Customer {
-    private Long customerId;
     private final String customerName;
+    private Long customerId;
 
     public Customer(Long customerId, String customerName) {
         this.customerId = customerId;

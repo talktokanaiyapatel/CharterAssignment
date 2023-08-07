@@ -8,6 +8,7 @@ import com.retailer.rewardspoints.service.RewardsPointService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -23,12 +24,17 @@ import java.util.Objects;
 @RequestMapping("/rewardPoints")
 public class RewardPointsController {
 
+    final Logger log = LoggerFactory.getLogger(RewardPointsController.class);
+
     @Autowired
     RewardsPointService rewardsPointService;
 
     @Autowired
     CustomerDataRepository customerRepository;
-    final Logger log = LoggerFactory.getLogger(RewardPointsController.class);
+
+    @Value("${points.resource.not.found.message}")
+    private String resourceNotFoundMessage;
+
     /**
      * handler for returning points for single customer
      *
@@ -43,10 +49,10 @@ public class RewardPointsController {
         log.debug(" customer found in repository?   {} ", Objects.nonNull(customerId));
         if (customer == null) {
             log.debug(" customer not found. throwing ResourceNotFoundException");
-            throw new ResourceNotFoundException(customerId, "Sorry We could not find this customer. Please add valid customer ID");
+            throw new ResourceNotFoundException(customerId, resourceNotFoundMessage);
         }
         RewardPoints customerRewardPoints = rewardsPointService.getRewardsByCustomerId(customerId);
-        log.debug(" Returning Rewards points object for customer {} with data {}", customerId,customerRewardPoints);
+        log.debug(" Returning Rewards points object for customer {} with data {}", customerId, customerRewardPoints);
         return new ResponseEntity<>(customerRewardPoints, HttpStatus.OK);
     }
 

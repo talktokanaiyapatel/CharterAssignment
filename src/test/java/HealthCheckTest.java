@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes={com.retailer.rewardspoints.RewardPointsApplication.class})
+@SpringBootTest(classes = {com.retailer.rewardspoints.RewardPointsApplication.class})
 @AutoConfigureMockMvc
 public class HealthCheckTest {
 
@@ -24,6 +24,7 @@ public class HealthCheckTest {
     public void testHealthAllCustomerData() throws Exception {
         this.mockMvc.perform(get("/rewardPoints/customers")).andDo(print()).andExpect(status().isOk());
     }
+
     @Test
     public void testCustomerNotFound() throws Exception {
         this.mockMvc.perform(get("/rewardPoints/customer/1018/points")).andDo(print()).andExpect(status().is5xxServerError())

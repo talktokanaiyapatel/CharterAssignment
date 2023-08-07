@@ -53,6 +53,7 @@ public class RewardPoints {
 
     /**
      * To facilitate the investigation
+     *
      * @return returns string representation
      */
     @Override
