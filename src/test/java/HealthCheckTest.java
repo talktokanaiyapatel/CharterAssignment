@@ -28,6 +28,6 @@ public class HealthCheckTest {
     @Test
     public void testCustomerNotFound() throws Exception {
         this.mockMvc.perform(get("/rewardPoints/customer/1018/points")).andDo(print()).andExpect(status().is5xxServerError())
-                .andExpect(content().string(CoreMatchers.containsString("CustomerID: 1018 Sorry We could not find this customer")));
+                .andExpect(content().string(CoreMatchers.containsString("CustomerID->1018 Sorry We could not find this customer")));
     }
 }
